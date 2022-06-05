@@ -1,119 +1,100 @@
-# 常见问题
+# Frequently asked questions
 
-<style>.md-content h3:before{content:'Q: ';color:var(--md-accent-fg-color);font-weight:bold}</style>
+Feedback QQ group: 689636812
 
-反馈QQ群：689636812  
-闲聊QQ群：725135081 (只闲聊不解答问题)  
-反馈邮箱： rec@danmuji.org
+Chat QQ group: 725135081 (chit-chat only, no support provided)
 
-本页面主要面向录播姬桌面版编写，但其中大部分信息对命令行版也生效。
+Feedback Email: rec@danmuji.org
 
-## 安装
+This page is intended for BililiveRecorder Desktop, but most information should also apply to the CLI version.
 
-### 不支持的操作系统
+## Installation
 
-录播姬不支持部分老旧操作系统，具体请查看[软硬件要求](./system-requirements.md)一页。
+### Unsupported operating systems
 
-### 下载文件不成功
+BililiveRecorder does not support certain outdated operating systems. For details, please read [System Requirements](./system-requirements.md).
 
-有时微软 Edge 等浏览器会因为 “**该文件有可能是不需要的程序**” 之类的原因阻止下载文件。
+### Download failed
 
-解决方法：点击浏览器内下载文件图标旁边的菜单按钮（类似这样： :material-dots-vertical:、:material-dots-horizontal:、:fontawesome-solid-angle-up:），在菜单中选择 “**保留文件**” 或 “**继续下载**” 等选项。
+Sometimes browsers like Microsoft Edge might block download for reasons like "**This file might be unnecessary program**".
 
-### 操作系统阻止安装
+Solution: click the menu/options icon next to the downloading file icon (might look like three dots or an up arrow), and select things like "**Keep file**" or "**Download anyway**" from the menu.
 
-有时 Windows 系统会弹出 “**SmartScreen 已保护你的电脑**” 的弹窗，阻止运行录播姬安装包。
+### Installation blocked by operating system
 
-解决方法：先点击弹窗上的一段文字 “**更多信息**”，这四个字的颜色会不太一样，然后就会显示出 “**仍要运行**” 的按钮。点击 “**仍要运行**” 即可。
+Sometimes Windows shows a pop-up that reads "**SmartScreen has protected your PC**" and block installation of BililiveRecorder.
 
-### 安装时弹出错误 Installation has failed
+Solution: click the "**More info**" on the pop-up (which will be in a slightly different color), then a "**Run anyway**" button will appear. Click that button.
 
-有可能是系统缺少一些组件、或者系统是被修改过的（精简版等）导致的。
+### Error message "Installation has failed"
 
-解决方法：尝试手动覆盖安装 [.NET Framework 4.8](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net48-offline-installer)，如果安装失败可能是你的操作系统版本太旧，已经不被支持了。
+Your system might lack certain components or the system was modified somehow.
 
-还有可能是杀毒软件在后台静默阻止了安装、或在后台静默删除了部分文件。
+Solution: try to manually install [.NET Framework 4.8](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net48-offline-installer). If this failed to install, maybe your system is too old to be supported.
 
-解决方法：暂时退出杀毒软件，或在杀毒软件里给录播姬添加白名单。
+It is also possible that your anti-virus silently blocked installation or silently removed some files.
 
-### 安装后录播姬闪退或报错
+Solution: temporarily turn off the anti-virus, or whitelist BililiveRecorder in your anti-virus.
 
-报错 “**未能加载文件或程序集**” 是因为录播姬所需要的文件被删除了，大部分情况下是杀毒软件在后台静默删除了一部分文件。
+### Crash or error after installation
 
-解决方法：在网站下载安装包，重新安装。（无需提前卸载，覆盖安装即可）
+If an error message reads "**Cannot load file or program set**", it's because some files needed are deleted. In most cases, this is because your anti-virus deleted some files silently in the background.
 
-闪退崩溃还有可能是其他问题导致的，如操作系统故障、显卡驱动问题、电脑硬件问题等等。如果无法解决可以加QQ群或发邮件询问。
+Solution: re-download installation program and re-install. (You don't need to first uninstall, just run installation again.)
 
-## 使用
+Crash might also be due to other reasons, like a system fault, a problem of graphics drivers, a problem with your hardware, etc. If reinstalling doesn't help, please ask by joining the QQ groupchat or sending an email.
 
-### 可以用录播姬录自己直播间吗？
+## Usage
 
-可以，但是 **不推荐**。  
-直播数据从B站服务器绕一圈容易出现各种玄学问题，并且会受到网络波动不可控因素影响。
+### Can I record my own live stream using BililiveRecorder?
 
-建议使用直播软件自带的录制功能，稳定可靠占用低。
+Yes, but **not recommended**.
 
-直播姬直接点击开播按钮旁边的录制按钮即可。
+As your stream gets uploaded to and downloaded from Bilibili's servers, some weird things might happen, and it's also subject to outside factors like network problems.
 
-OBS 请检查 **设置** > **输出** > **录像** 中的 **录像质量**，设置为 **与串流画质相同**。  
-如果使用的是高级输出模式，则是 **编码器** 设置为 **（使用推流编码器）**。
+We recommend you to use the recording function within your live streaming program, which is more stable and uses less of your device's resources.
 
-OBS 录制时推荐设置录制文件格式为 `MKV`，万一发生软件崩溃、系统断电等问题，文件还可以播放，不会损坏。  
-如果需要 `MP4` 可以在录制结束后在 OBS 首页的 **文件** > **录像转封装** 里快速转封装格式。
+For Bilibili 直播姬, just click the recording button next to the start stream button.
 
-### 不能切换到房间列表页面
+For OBS, please check **Settings** -> **Output** -> **Recording** -> **Recording quality**, and set to **Same as stream**. If you are using advanced output mode, then set **Encoder** to **(Use stream encoder)**.
 
-要录制直播需要先选择一个工作目录，工作目录是保存配置文件和录像文件的地方。
+When recording with OBS, it is recommended to set recording format to `MKV`. This makes the file still playable in case OBS unexpectedly closed (like crash or power outage). If you need `MP4`, you might use **File** -> **Remux recordings** to convert file format quickly.
 
-如果在打开录播姬时点击了 **工具箱** 按钮，就只能使用工具箱里的功能，不能录直播。
+### I can't switch to the channel list page
 
-### 选择工作目录时提示已有其他文件
+In order to record a live stream, you need to first select a working directory. The working directory is where config and recordings are saved.
 
-录播姬需要一个专用的文件夹存放录像文件，不能选择桌面、用户文档文件夹、C盘根目录等路径。
-请在有充足空间的位置新建一个文件夹给录播姬使用。
+If you instead clicked **Toolbox** on startup, then you can only use toolbox features for this session and cannot record a live stream.
 
-如果曾经在同一个位置使用过录播姬，突然开始提示 **已有其他文件** 了，可能是因为录播姬的配置文件丢失了。
-录播姬的配置文件是工作目录里的 `config.json` 文件，同时会备份上一次写入的文件到 `config.backup.json`。
-如果配置文件丢失了，可以把备份文件复制一份改名为 `config.json`。
+### When I select a working directory, it says there are already other files
 
-### 录播姬日志中显示启动录制出错 NotFound
+BililiveRecorder needs a empty folder for its own in order to save its data. You cannot select paths like Desktop, Documents or root of C:\. Please create a new folder for BililiveRecorder in a place with plenty of remaining disk space.
 
-在直播刚开始时和最后结束时出现这个错误是正常情况。
+If you have been previously using a directory and it starts saying **already have other files**, maybe it's because the config file is lost. BililiveRecorder stores its config in `config.json` in the working directory, and it will also make a backup of this file as `config.backup.json`. If the config file is lost, you can copy the backup file and rename to `config.json`.
 
-开始直播时：
+### In the logs, it says "error when starting recording: NotFound"
 
-- 主播先在直播个人中心点击 “开始直播” 按钮
-- 录播姬马上检测到直播间状态变为直播中，开始尝试录制
-- 因为主播还没有在直播软件里开始推流，所以直播服务器返回 404 Not Found 错误
-- 主播在直播软件里点击 “开始推流”
-- 录播姬自动重试，开始正常录制
+It is **normal** to get this error when the stream just started or just ended.
 
-关闭直播时：
+I'll spare you the wall of text from the original Chinese FAQ, but this basically happens when the channel is "live" on the Bilibili dashboard but not streaming any data to the servers. Unlike Twitch which automatically detects you streaming data to their servers, Bilibili requires you to toggle your channel status manually, creating this period of problematic time.
 
-- 主播先在直播软件里点击 “停止推流”
-- 直播服务器断开录播姬的连接
-- 录播姬自动重试，直播服务器因为没有数据所以返回 404 Not Found 错误
-- 主播在直播个人中心点击 “关闭直播” 按钮
-- 录播姬检测到直播间状态不再是直播中，停止重试
+### What are the differences between recording modes?
 
-<!-- 设置 -->
+Read [Recording Mode](./record-mode.md).
 
-### 录制模式有什么区别？
+(Translator's note: in a nutshell, raw mode dumps data from the servers directly onto your hard drive, while normal mode attempts to parse and analyse the data, and attempt to fix any problems.)
 
-请查看 [录制模式](./record-mode.md) 页面。
+### What do I do with the files from recording chat?
 
-### 录制的弹幕文件怎么用？
+You can open the file directly in a modern web browser like Chrome, Firefox or Edge. IE is unsupported.
 
-可以直接在 Chrome、FireFox、Edge 等浏览器里打开。不支持 IE 浏览器。
+For more ways to use them, read [Recording Chat](./danmaku.md).
 
-其他使用方法请查看 [弹幕录制](./danmaku.md) 页面。
+### What is "raw chat data"?
 
-### 弹幕原始数据是什么？
+Raw chat data is the original JSON data from the servers.
 
-弹幕原始数据是从B站直播弹幕服务器收到的原始 JSON。
-
-如果你不了解它有什么作用，那你八成是不需要保存原始数据的。  
-关闭 “保存弹幕原始数据” 可以大幅度减少弹幕文件的大小。
+If you don't know what to do with it, likely you don't need to save it. Turning off "save raw chat data" to massively reduce file size of recorded chat.
 
 ### 画质 ID 是什么？
 
